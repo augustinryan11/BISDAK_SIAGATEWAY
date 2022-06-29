@@ -13,11 +13,11 @@
 |
 */
 
-//$router->get('/', function () use ($router) {
-  //  return $router->app->version();
-//})
+$router->get('/', function () use ($router) {
+    return $router->app->version();
+})
 
-$router->group(['middleware' => 'client.credentials'],function() use ($router) {
+//$router->group(['middleware' => 'client.credentials'],function() use ($router) {
 
     $router->get('/books1', 'Book1Controller@index');
     $router->post('/books1', 'Book1Controller@add');
